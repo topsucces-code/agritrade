@@ -1,0 +1,102 @@
+{
+  "name": "agritrade-ai",
+  "version": "1.0.0",
+  "description": "Revolutionary AI-powered agricultural commodity trading platform connecting African farmers directly to buyers",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon backend/src/index.js",
+    "start": "node backend/src/index.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "build": "npm run build:backend && npm run build:frontend",
+    "build:backend": "tsc",
+    "build:frontend": "cd frontend && npm run build",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "format": "prettier --write .",
+    "docker:build": "docker build -t agritrade-ai .",
+    "docker:run": "docker run -p 3000:3000 agritrade-ai",
+    "migrate": "node backend/scripts/migrate.js",
+    "seed": "node backend/scripts/seed.js"
+  },
+  "keywords": [
+    "agriculture",
+    "trading",
+    "AI",
+    "machine-learning",
+    "africa",
+    "commodities",
+    "blockchain",
+    "fintech",
+    "marketplace",
+    "react-native",
+    "nodejs",
+    "mongodb"
+  ],
+  "author": {
+    "name": "AgriTrade AI Team",
+    "email": "dev@agritrade-ai.com",
+    "url": "https://agritrade-ai.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/topsucces-code/agritrade#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/topsucces-code/agritrade.git"
+  },
+  "bugs": {
+    "url": "https://github.com/topsucces-code/agritrade/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "dependencies": {
+    "@google-cloud/vision": "^4.0.2",
+    "aws-sdk": "^2.1490.0",
+    "sharp": "^0.32.6",
+    "fastify": "^4.24.3",
+    "mongoose": "^7.6.3",
+    "redis": "^4.6.10",
+    "jsonwebtoken": "^9.0.2",
+    "bcryptjs": "^2.4.3",
+    "joi": "^17.11.0",
+    "dotenv": "^16.3.1",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "express-rate-limit": "^7.1.5",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.7",
+    "twilio": "^4.19.0",
+    "axios": "^1.6.0",
+    "moment": "^2.29.4",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.9",
+    "@types/express": "^4.17.20",
+    "@types/jest": "^29.5.7",
+    "@types/cors": "^2.8.15",
+    "@types/multer": "^1.4.10",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
+    "eslint": "^8.53.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.0.3",
+    "supertest": "^6.3.3",
+    "typescript": "^5.2.2"
+  },
+  "funding": {
+    "type": "seed",
+    "url": "https://agritrade-ai.com/funding"
+  },
+  "config": {
+    "mongodbMemoryServer": {
+      "version": "6.0.0"
+    }
+  }
+}
